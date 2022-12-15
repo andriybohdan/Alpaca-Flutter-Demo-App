@@ -22,7 +22,7 @@ class LoginPage extends StatelessWidget {
       clientId: clientId,
       clientSecret: clientSecret);
   late OAuth2Helper oauthHelper = OAuth2Helper(client,
-      grantType: OAuth2Helper.authorizationCode,
+      grantType: OAuth2Helper.AUTHORIZATION_CODE,
       clientId: clientId,
       clientSecret: clientSecret,
       scopes: ['account:write', 'trading', 'data']);
