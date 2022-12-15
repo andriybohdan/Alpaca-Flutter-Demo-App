@@ -3,7 +3,7 @@ import 'pages/login.dart';
 import 'pages/dashboard.dart';
 import 'package:url_strategy/url_strategy.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'dart:html';
+// import 'dart:html';
 
 const loginRoute = '/';
 const dashboardRoute = '/dashboard';
@@ -35,9 +35,10 @@ class MyApp extends StatelessWidget {
         default:
           String? code = Uri.base.queryParameters['code'];
           // This code tells the pop-up auth window to send the code to parent
-          if (window.opener != null && code != null) {
-            window.opener!.postMessage(window.location.href, "http://localhost:3000");
-          }
+          // if (window.opener != null && code != null) {
+          //   window.opener!
+          //       .postMessage(window.location.href, "http://localhost:3000");
+          // }
           return null;
       }
       return MaterialPageRoute(builder: (BuildContext context) => screen);

@@ -31,7 +31,7 @@ class _DashboardState extends State<Dashboard> {
       clientId: clientId,
       clientSecret: clientSecret);
   late OAuth2Helper oauthHelper = OAuth2Helper(client,
-      grantType: OAuth2Helper.AUTHORIZATION_CODE,
+      grantType: OAuth2Helper.authorizationCode,
       clientId: clientId,
       clientSecret: clientSecret,
       scopes: ['account:write', 'trading', 'data']);

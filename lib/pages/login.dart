@@ -7,7 +7,7 @@ import '../models/alpaca_client.dart';
 class LoginPage extends StatelessWidget {
   LoginPage({Key? key, required this.title}) : super(key: key);
   final String title; // Passed in from main.dart
-  
+
   // Get variables from .env
   final clientId = dotenv.env['OAUTH_CLIENT_ID'] ?? 'CLIENT ID NOT FOUND';
   final clientSecret =
@@ -22,11 +22,11 @@ class LoginPage extends StatelessWidget {
       clientId: clientId,
       clientSecret: clientSecret);
   late OAuth2Helper oauthHelper = OAuth2Helper(client,
-      grantType: OAuth2Helper.AUTHORIZATION_CODE,
+      grantType: OAuth2Helper.authorizationCode,
       clientId: clientId,
       clientSecret: clientSecret,
       scopes: ['account:write', 'trading', 'data']);
-      
+
   // Gets OAuth token and then navigates to the trading dashboard
   void startLogin(BuildContext context) {
     oauthHelper.getToken();
