@@ -18,7 +18,7 @@ class LoginPage extends StatelessWidget {
   // Instantiate OAuth client and helper
   late AlpacaClient client = AlpacaClient(
       redirectUri: redirectUri,
-      customUriScheme: redirectUri,
+      customUriScheme: "alpflutter",
       clientId: clientId,
       clientSecret: clientSecret);
   late OAuth2Helper oauthHelper = OAuth2Helper(client,

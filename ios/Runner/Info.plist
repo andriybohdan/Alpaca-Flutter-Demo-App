@@ -45,5 +45,11 @@
 	<false/>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
+	<key>CFBundleTypeRole</key>
+	<string>Editor</string>
+	<key>CFBundleURLName</key>
+	<string>alpaca-flutter-demo</string>
+	<key>CFBundleURLSchemes</key>
+	<string>alpflutter</string>
 </dict>
 </plist>
